@@ -1,5 +1,5 @@
 # TopXNotifyV2 Documentation
-![TopXNotifyV2](https://cdn.discordapp.com/attachments/1045025595588874310/1173807302189523075/TopXNotify.png?ex=65654c3d&is=6552d73d&hm=5ed85f6adcb6b339ab009d4d6b3d4c46b7850f40d4e4f7b782b8d218f40f9977&)
+![TopXNotifyV2](https://media.discordapp.net/attachments/969012113160933486/1209242587253440542/v2.png?ex=65e635eb&is=65d3c0eb&hm=829c142a747246e3291e706bf84677aca05286b0f2eec8da0730ced57f082f54&=&format=webp&quality=lossless&width=554&height=554)
 
 ### Thanks For Using Our Script ❤️
 
