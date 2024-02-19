@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;500;800&family=Satisfy&display=swap');
+
+:root {
+    --BG-Color: rgba(0, 0, 0, .4);
+    --success: #5cb95c;
+    --error: #b62121;
+    --info: #2571b0;
+    --warning: #dbd818;
+    --FontColor: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    color: var(--FontColor);
+    user-select: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+.top-left,
+.center-top,
+.top-right,
+.center-right,
+.center-left,
+.bottom-left,
+.center-bottom,
+.bottom-right {
+    overflow: hidden;
+    position: absolute;
+}
+
+.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.center-top {
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.center-bottom {
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.center-right {
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
+}
+
+.center-left {
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+}
+
+.bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+.notify {
+    position: relative;
+    max-width: 400px;
+    min-height: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: var(--BG-Color);
+}
+
+.notify::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    border-radius: 10px;
+    top: 50%;
+    height: 50%;
+    width: 10px;
+    background-color: var(--MainColor);
+    transform: translate(0, -50%);
+}
+
+.notify::before {
+    content: '';
+    position: absolute;
+    right: -5px;
+    border-radius: 10px;
+    top: 50%;
+    height: 50%;
+    width: 10px;
+    background-color: var(--MainColor);
+    transform: translate(0, -50%);
+}
+
+.type-name {
+    text-transform: capitalize;
+    font-family: "Satisfy", cursive;
+    color: var(--MainColor);
+    position: absolute;
+    font-size: 18px;
+    top: -12px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+}
+
+.header i {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: var(--MainColor);
+}
+
+.header span {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: var(--MainColor);
+}
+
+.message {
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+.dots {
+    display: flex;
+    gap: 5%;
+    position: absolute;
+    bottom: -10px;
+    right: 10%;
+    height: 20px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: var(--MainColor);
+    border-radius: 50%;
+}
+
+.top-left .notify,
+.center-left .notify,
+.bottom-left .notify {
+    animation: ShowNotifictionLeft .3s;
+}
+
+.top-right .notify,
+.center-right .notify,
+.bottom-right .notify {
+    animation: ShowNotifictionRight .3s;
+}
+
+.center-top .notify {
+    animation: ShowNotifictionTop .3s;
+}
+
+.center-bottom .notify {
+    animation: ShowNotifictionBottom .3s;
+}
+
+@keyframes ShowNotifictionLeft {
+    from {
+        opacity: 0;
+        left: -100%;
+    }
+
+    to {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes ShowNotifictionRight {
+    from {
+        opacity: 0;
+        right: -100%;
+    }
+
+    to {
+        opacity: 1;
+        right: 0;
+    }
+}
+
+@keyframes ShowNotifictionTop {
+    from {
+        opacity: 0;
+        transform: translate(0, -100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes ShowNotifictionBottom {
+    from {
+        opacity: 0;
+        transform: translate(0, 100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes hideNotifictionLeft {
+    from {
+        opacity: 1;
+        left: 0;
+    }
+
+    to {
+        opacity: 0;
+        left: -100%;
+    }
+}
+
+@keyframes hideNotifictionRight {
+    from {
+        opacity: 1;
+        right: 0;
+    }
+
+    to {
+        opacity: 0;
+        right: -100%;
+    }
+}
+
+@keyframes hideNotifictionTop {
+    from {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(0, -100%);
+    }
+}
+
+@keyframes hideNotifictionBottom {
+    from {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(0, 100%);
+    }
+}
