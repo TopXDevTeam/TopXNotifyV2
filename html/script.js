@@ -11,9 +11,7 @@ $(function () {
         const header = $("<div>").addClass("header").html(`<i class="fa-solid ${GetIcon(type)}"></i><span>${title}</span>`);
         const msg = $("<div>").addClass("message").html(`<p>${message}</p>`);
         const dots = $("<div>").addClass("dots");
-        const dot1 = $("<div>").addClass("dot");
-        const dot2 = $("<div>").addClass("dot");
-        const dot3 = $("<div>").addClass("dot");
+        const dot = $("<div>").addClass("dot");
         const Audio = $('<audio>')
         const AudioSRC = $('<source>').attr({
             'src': 'sounds/sound.mp3',
@@ -24,7 +22,7 @@ $(function () {
 
         $(container).css(`--MainColor`, `var(--${type})`)
 
-        dots.append(dot1, dot2, dot3);
+        dots.append(dot, dot.clone(), dot.clone());
 
         if (sound) {
             Audio[0].play();
