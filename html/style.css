@@ -166,6 +166,20 @@ body {
     border-radius: 50%;
 }
 
+.dot:nth-child(1) {
+    animation: Bouncing 1s ease infinite;
+}
+
+.dot:nth-child(2) {
+    animation: Bouncing 1s ease infinite;
+    animation-delay: .2s;
+}
+
+.dot:nth-child(3) {
+    animation: Bouncing 1s ease infinite;
+    animation-delay: .4s;
+}
+
 .top-left .notify,
 .center-left .notify,
 .bottom-left .notify {
@@ -279,5 +293,35 @@ body {
     to {
         opacity: 0;
         transform: translate(0, 100%);
+    }
+}
+
+@keyframes Bouncing {
+    70% {
+        transform: translateY(0%);
+    }
+
+    80% {
+        transform: translateY(-15%);
+    }
+
+    90% {
+        transform: translateY(0%);
+    }
+
+    95% {
+        transform: translateY(-7%);
+    }
+
+    97% {
+        transform: translateY(0%);
+    }
+
+    99% {
+        transform: translateY(-3%);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }
